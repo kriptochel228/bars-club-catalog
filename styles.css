@@ -10,7 +10,7 @@ a { color:inherit; }
 .brand strong,.brand small { display:block; line-height:1; }
 .brand strong { font-size:1.1rem; letter-spacing:.18em; }
 .brand small { margin-top:6px; color:var(--muted); font-size:.6rem; letter-spacing:.12em; text-transform:uppercase; }
-.header-link { color:var(--white); font-size:.75rem; font-weight:700; letter-spacing:.08em; text-decoration:none; text-transform:uppercase; }
+.header-link { display:inline-flex; min-height:44px; align-items:center; color:var(--white); font-size:.75rem; font-weight:700; letter-spacing:.08em; text-decoration:none; text-transform:uppercase; }
 .header-link span { margin-left:10px; color:var(--teal-bright); }
 .header-nav { display:flex; gap:24px; align-items:center; }
 .header-link:hover,.header-link:focus-visible { color:var(--teal-bright); }
