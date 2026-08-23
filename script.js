@@ -7,7 +7,7 @@ const availabilityLabels = {
 };
 
 function availability(product) {
-  const status = Object.hasOwn(availabilityLabels, product.availability) ? product.availability : "unknown";
+  const status = Object.prototype.hasOwnProperty.call(availabilityLabels, product.availability) ? product.availability : "unknown";
   return {
     status,
     label: availabilityLabels[status] || "Статус уточнюється"
