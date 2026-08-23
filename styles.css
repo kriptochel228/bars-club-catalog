@@ -59,8 +59,8 @@ footer p:last-child { text-align:right; }
 @media (max-width:850px) {
   .site-header { width:calc(100% - 40px); }
   .hero { grid-template-columns:1fr; padding:130px 20px 70px; }
-  .hero-copy { padding-bottom:45px; }
-  .hero-emblem img { width:min(78vw,440px); }
+  .hero-copy { padding-bottom:0; }
+  .hero-emblem { display:none; }
   .hero-side { display:none; }
   .product-section { grid-template-columns:1fr; min-height:auto; }
   .product-info,.image-left .product-info { order:1; max-width:none; min-height:auto; padding:78px 24px 62px; }
