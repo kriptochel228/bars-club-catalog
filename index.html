@@ -8,12 +8,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="size-modal.css">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="BARS — на початок сторінки"><img src="assets/bars-emblem.jpg" alt="Емблема BARS Dojo Federation Ukraine Odesa Club"><span><strong>BARS</strong><small>Karate Club · Odesa</small></span></a>
     <nav class="header-nav" aria-label="Головна навігація">
-      <a class="header-link" href="size-guide.html">Розмірна сітка</a>
+      <a class="header-link" href="#tshirt">Розмірна сітка</a>
       <a class="header-link" href="#collection">Колекція <span aria-hidden="true">↓</span></a>
     </nav>
   </header>
@@ -34,6 +35,13 @@
     <section id="collection" class="collection" aria-label="Каталог товарів"></section>
   </main>
   <footer><div class="brand footer-brand"><img src="assets/bars-emblem.jpg" alt=""><span><strong>BARS</strong><small>Karate Club · Odesa</small></span></div><p>Клубна форма та екіпірування</p><p>© <span id="year"></span></p></footer>
-  <script src="products.js"></script><script src="script.js"></script><script src="navigation.js"></script>
+  <dialog class="size-dialog" id="size-dialog" aria-labelledby="size-dialog-title">
+    <div class="dialog-handle" aria-hidden="true"></div>
+    <header><div><p>Розміри у сантиметрах</p><h2 id="size-dialog-title"></h2></div><button type="button" class="dialog-close" aria-label="Закрити розмірну сітку">×</button></header>
+    <div class="chart-tabs" id="chart-tabs" role="tablist" aria-label="Оберіть таблицю"></div>
+    <div id="chart-content"></div>
+    <p class="chart-note">Вимірюйте схожий одяг у розкладеному вигляді. Через особливості виробництва можливе відхилення ±1,5 см.</p>
+  </dialog>
+  <script src="products.js"></script><script src="sizes.js"></script><script src="script.js"></script><script src="size-modal.js"></script><script src="navigation.js"></script>
 </body>
 </html>

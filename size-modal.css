@@ -1,0 +1,25 @@
+.size-chart-button { display:flex; width:100%; max-width:520px; min-height:52px; margin:0 0 26px; padding:0 16px; align-items:center; justify-content:space-between; color:var(--white); background:rgba(22,183,161,.07); border:1px solid rgba(22,183,161,.38); cursor:pointer; font:inherit; font-size:.72rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+.size-chart-button b { color:var(--teal-bright); font-size:1.25rem; font-weight:400; }
+.size-chart-button:hover,.size-chart-button:focus-visible { background:var(--teal); color:var(--black); }
+.size-chart-button:hover b,.size-chart-button:focus-visible b { color:var(--black); }
+.size-dialog { width:min(760px,calc(100% - 24px)); max-height:min(88svh,900px); margin:auto auto 0; padding:0 22px 28px; overflow-y:auto; color:var(--white); background:#101615; border:1px solid var(--line); border-radius:20px 20px 0 0; box-shadow:0 -20px 80px rgba(0,0,0,.55); }
+.size-dialog::backdrop { background:rgba(0,0,0,.72); backdrop-filter:blur(4px); }
+.dialog-open { overflow:hidden; }
+.dialog-handle { width:46px; height:4px; margin:10px auto 18px; background:#52605d; border-radius:10px; }
+.size-dialog header { position:sticky; z-index:2; top:0; display:flex; margin:0 -22px; padding:8px 22px 18px; align-items:start; justify-content:space-between; background:#101615; border-bottom:1px solid var(--line); }
+.size-dialog header p { margin:0 0 5px; color:var(--teal-bright); font-size:.58rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+.size-dialog h2 { margin:0; font-size:clamp(1.8rem,7vw,2.8rem); line-height:1; letter-spacing:-.04em; }
+.dialog-close { display:grid; width:44px; height:44px; flex:0 0 auto; place-items:center; color:var(--white); background:#202927; border:0; border-radius:50%; cursor:pointer; font-size:1.7rem; line-height:1; }
+.chart-tabs { display:flex; gap:7px; margin:20px 0 16px; overflow-x:auto; scrollbar-width:none; }
+.chart-tabs::-webkit-scrollbar { display:none; }
+.chart-tabs button { min-height:44px; padding:0 14px; flex:0 0 auto; color:var(--muted); background:transparent; border:1px solid var(--line); cursor:pointer; font:inherit; font-size:.68rem; font-weight:700; }
+.chart-tabs button.active { color:var(--black); background:var(--teal-bright); border-color:var(--teal-bright); }
+.mobile-table { overflow-x:auto; border:1px solid var(--line); scrollbar-color:var(--teal) #1a2220; }
+.mobile-table table { width:100%; border-collapse:collapse; font-size:.74rem; }
+.mobile-table th,.mobile-table td { min-width:82px; padding:12px 10px; text-align:center; white-space:nowrap; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+.mobile-table th:first-child { position:sticky; z-index:1; left:0; min-width:72px; color:var(--yellow); background:#18201e; }
+.mobile-table thead th { position:sticky; top:0; color:var(--muted); background:#18201e; font-size:.57rem; letter-spacing:.05em; text-transform:uppercase; }
+.mobile-table thead th:first-child { z-index:2; }
+.chart-note { margin:16px 0 0; color:#7f8b88; font-size:.66rem; }
+@media (min-width:851px) { .size-dialog { margin:auto; border-radius:16px; } }
+@media (max-width:520px) { .size-dialog { width:100%; max-height:91svh; border-inline:0; } .mobile-table th,.mobile-table td { padding:11px 8px; } }

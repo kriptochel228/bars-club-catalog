@@ -14,6 +14,7 @@ function productSection(product, index) {
   const firstVariant = variants[0];
   return `<article class="product-section ${index % 2 === 0 ? "image-right" : "image-left"}" id="${product.id}" data-product="${product.id}">
     <div class="product-info"><p class="product-number">${product.number} / ${String(products.length).padStart(2, "0")}</p><p class="product-label">${product.label}</p><h2>${product.name}</h2><p class="product-description">${product.description}</p>
+      ${product.sizeChart ? `<button class="size-chart-button" type="button" data-size-chart="${product.sizeChart}"><span>Розмірна сітка</span><b aria-hidden="true">＋</b></button>` : ""}
       ${variants.length ? `<div class="variant-control" aria-label="Варіант товару">${variants.map((variant, i) => `<button type="button" class="variant-button${i === 0 ? " active" : ""}" data-variant="${variant}">${variant}</button>`).join("")}</div><div class="sizes-panel"><div class="sizes-content">${sizeGroups(product, firstVariant)}</div><small>${product.sizesNote}</small></div>` : ""}
       <div class="price-row"><span>Ціна</span><strong>${money(product.price)}</strong></div></div>
     <figure class="product-visual"><img src="${product.image}" alt="${product.imageAlt}" style="object-position:${product.imagePosition || "center"}"><span>${product.number}</span></figure>
