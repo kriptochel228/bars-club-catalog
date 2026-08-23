@@ -10,8 +10,10 @@ a { color:inherit; }
 .brand strong,.brand small { display:block; line-height:1; }
 .brand strong { font-size:1.1rem; letter-spacing:.18em; }
 .brand small { margin-top:6px; color:var(--muted); font-size:.6rem; letter-spacing:.12em; text-transform:uppercase; }
-.header-link { color:var(--white); font-size:.75rem; font-weight:700; letter-spacing:.08em; text-decoration:none; text-transform:uppercase; }
+.header-link { display:inline-flex; min-height:44px; align-items:center; color:var(--white); font-size:.75rem; font-weight:700; letter-spacing:.08em; text-decoration:none; text-transform:uppercase; }
 .header-link span { margin-left:10px; color:var(--teal-bright); }
+.header-nav { display:flex; gap:24px; align-items:center; }
+.header-link:hover,.header-link:focus-visible { color:var(--teal-bright); }
 .hero { position:relative; display:grid; grid-template-columns:1fr .9fr; min-height:100svh; padding:145px max(32px,calc((100vw - 1320px)/2)) 70px; align-items:center; overflow:hidden; }
 .hero::before { content:""; position:absolute; top:-25%; right:-12%; width:58vw; height:58vw; border:1px solid rgba(7,152,134,.2); border-radius:50%; box-shadow:0 0 120px rgba(7,152,134,.08); }
 .hero-copy { position:relative; z-index:2; }
@@ -76,8 +78,9 @@ footer p:last-child { text-align:right; }
 }
 @media (max-width:520px) {
   .brand img { width:42px; height:42px; }
-  .header-link { font-size:0; }
-  .header-link span { margin:0; font-size:1rem; }
+  .header-nav { gap:12px; }
+  .header-link { font-size:.58rem; }
+  .header-link span { display:none; }
   h1 { font-size:clamp(3.7rem,18vw,5.4rem); }
   h2 { font-size:clamp(2.8rem,14vw,4.2rem); }
   .variant-control { width:100%; }
