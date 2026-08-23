@@ -1,26 +1,26 @@
 // Дані каталогу BARS. Ціни вже актуалізовані за вашим описом.
 // Розмірні сітки поки тестові — замініть їх на фактичні перед публікацією.
 window.PRODUCTS = [
-  { id: "tshirt", number: "01", name: "Клубна футболка", label: "Форма BARS", price: 800, availability: "available",
+  { id: "tshirt", number: "01", name: "Клубна футболка", label: "Форма BARS", price: 800,
     image: "assets/bars-tshirt.jpg", imageAlt: "Клубна футболка BARS — вигляд спереду та ззаду",
     description: "Легка клубна футболка у фірмовій чорно-бірюзовій палітрі.",
     variants: { "Хлопчик": ["122", "128", "134", "140", "146", "152", "158", "164"], "Дівчинка": ["122", "128", "134", "140", "146", "152", "158", "164"] },
     sizesNote: "Зріст, см · тестова сітка" },
-  { id: "tracksuit", number: "02", name: "Клубний костюм", label: "Повний комплект", price: 3000, availability: "available",
+  { id: "tracksuit", number: "02", name: "Клубний костюм", label: "Повний комплект", price: 3000,
     image: "assets/bars-tracksuit.png", imageAlt: "Клубний спортивний костюм BARS",
     description: "Кофта та штани з клубною символікою для тренувань і виїздів.",
     variants: {
       "Хлопчик": { "Кофта": ["128", "134", "140", "146", "152", "158", "164"], "Штани": ["128", "134", "140", "146", "152", "158", "164"] },
       "Дівчинка": { "Кофта": ["128", "134", "140", "146", "152", "158", "164"], "Штани": ["128", "134", "140", "146", "152", "158", "164"] }
     }, sizesNote: "Зріст, см · тестова сітка" },
-  { id: "shorts", number: "03", name: "Спортивні шорти", label: "Тимчасове фото", price: null, availability: "soon",
+  { id: "shorts", number: "03", name: "Спортивні шорти", label: "Тимчасове фото", price: null,
     image: "assets/catalog-products.png", imageAlt: "Демонстраційне зображення спортивних шортів", imagePosition: "23% center",
     description: "Фото, ціна та точна розмірна сітка будуть додані пізніше.",
     variants: { "Хлопчик": ["128", "140", "152", "164"], "Дівчинка": ["128", "140", "152", "164"] }, sizesNote: "Тестова сітка" },
-  { id: "bag", number: "04", name: "Сумка для амуніції", label: "Один розмір · тимчасове фото", price: 1500, availability: "available",
+  { id: "bag", number: "04", name: "Сумка для амуніції", label: "Один розмір · тимчасове фото", price: 1500,
     image: "assets/catalog-products.png", imageAlt: "Демонстраційне зображення спортивної сумки", imagePosition: "43% center",
     description: "Містка спортивна сумка для форми та захисної амуніції. Реальне фото додамо пізніше." },
-  { id: "guards", number: "05", name: "Накладки на ноги", label: "Захист", price: 300, availability: "available",
+  { id: "guards", number: "05", name: "Накладки на ноги", label: "Захист", price: 300,
     image: "assets/bars-leg-guards.jpg", imageAlt: "Сині та червоні накладки на ноги BARS",
     description: "Клубні накладки для тренувань. Доступні у синьому та червоному кольорах.",
     variants: { "Сині": ["S", "M", "L"], "Червоні": ["S", "M", "L"] }, sizesNote: "Тестова сітка" }
