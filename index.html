@@ -7,12 +7,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="navigation.css">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="BARS — на початок сторінки"><img src="assets/bars-emblem.jpg" alt="Емблема BARS Dojo Federation Ukraine Odesa Club"><span><strong>BARS</strong><small>Karate Club · Odesa</small></span></a>
     <a class="header-link" href="#collection">Колекція <span aria-hidden="true">↓</span></a>
   </header>
+  <nav class="catalog-navigation" aria-label="Навігація каталогом">
+    <a href="#tshirt"><span>01</span>Футболка</a>
+    <a href="#tracksuit"><span>02</span>Костюм</a>
+    <a href="#shorts"><span>03</span>Шорти</a>
+    <a href="#bag"><span>04</span>Сумка</a>
+    <a href="#guards"><span>05</span>Накладки</a>
+  </nav>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
   <main id="top">
     <section class="hero">
       <div class="hero-copy"><p class="eyebrow">BARS Dojo · Ukraine</p><h1>Форма<br>нашого<br><em>характеру.</em></h1><p>Клубний одяг та екіпірування для тренувань, змагань і перемог.</p><a class="primary-button" href="#collection">Дивитися колекцію</a></div>
@@ -22,6 +31,6 @@
     <section id="collection" class="collection" aria-label="Каталог товарів"></section>
   </main>
   <footer><div class="brand footer-brand"><img src="assets/bars-emblem.jpg" alt=""><span><strong>BARS</strong><small>Karate Club · Odesa</small></span></div><p>Клубна форма та екіпірування</p><p>© <span id="year"></span></p></footer>
-  <script src="products.js"></script><script src="script.js"></script>
+  <script src="products.js"></script><script src="script.js"></script><script src="navigation.js"></script>
 </body>
 </html>
