@@ -62,10 +62,19 @@
   .catalog-navigation a:not([aria-current="location"]) { width: 38px; overflow: hidden; }
 }
 
+@media (max-width: 1750px) and (min-width: 851px) {
+  main,
+  footer { margin-left: 140px; }
+  .site-header {
+    left: calc(50% + 70px);
+    width: min(calc(100% - 204px), 1320px);
+  }
+}
+
 @media (max-width: 850px) {
   .catalog-navigation {
     top: auto;
-    bottom: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom));
     left: 50%;
     width: calc(100% - 24px);
     max-width: 560px;
@@ -73,12 +82,14 @@
     gap: 2px;
     overflow-x: auto;
     transform: translateX(-50%);
+    padding-bottom: max(8px, env(safe-area-inset-bottom));
     scrollbar-width: none;
   }
   .catalog-navigation::-webkit-scrollbar { display: none; }
   .catalog-navigation a { min-width: max-content; flex: 1 0 auto; justify-content: center; padding: 10px 12px; }
   .product-section { scroll-margin-top: 0; }
-  footer { padding-bottom: 100px; }
+  body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+  footer { padding-bottom: 32px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
