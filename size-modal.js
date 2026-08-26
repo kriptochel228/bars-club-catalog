@@ -13,6 +13,8 @@ function renderChart(chart, key) {
   });
 
   chartContent.innerHTML = `
+    ${chart.diagram ? `<figure class="measurement-diagram"><img src="${chart.diagram}" alt="${chart.diagramAlt || "Схема вимірювання"}"><figcaption>Схема замірів A, B і C</figcaption></figure>` : ""}
+    <p class="table-scroll-hint" aria-hidden="true">Гортайте таблицю <span>→</span></p>
     <div class="mobile-table" tabindex="0" aria-label="Таблиця прокручується горизонтально">
       <table>
         <thead><tr>${group.columns.map((column) => `<th scope="col">${column}</th>`).join("")}</tr></thead>

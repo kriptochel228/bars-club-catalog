@@ -2,6 +2,11 @@ const collection = document.querySelector("#collection");
 const products = window.PRODUCTS || [];
 const money = (price) => price ? `${new Intl.NumberFormat("uk-UA").format(price)} грн` : "Ціна уточнюється";
 
+function priceOptions(product) {
+  const prices = product.prices || [{ label: "", value: product.price }];
+  return prices.map(({ label, value }) => `<span class="price-option">${label ? `<small>${label}</small>` : ""}<strong>${money(value)}</strong></span>`).join("");
+}
+
 function sizeGroups(product, variant) {
   if (!product.variants) return "";
   const selected = product.variants[variant];
@@ -16,7 +21,8 @@ function productSection(product, index) {
     <div class="product-info"><p class="product-number">${product.number} / ${String(products.length).padStart(2, "0")}</p><p class="product-label">${product.label}</p><h2>${product.name}</h2><p class="product-description">${product.description}</p>
       ${product.sizeChart ? `<button class="size-chart-button" type="button" data-size-chart="${product.sizeChart}"><span>Розмірна сітка</span><b aria-hidden="true">＋</b></button>` : ""}
       ${variants.length ? `<div class="variant-control" aria-label="Варіант товару">${variants.map((variant, i) => `<button type="button" class="variant-button${i === 0 ? " active" : ""}" data-variant="${variant}">${variant}</button>`).join("")}</div><div class="sizes-panel"><div class="sizes-content">${sizeGroups(product, firstVariant)}</div><small>${product.sizesNote}</small></div>` : ""}
-      <div class="price-row"><span>Ціна</span><strong>${money(product.price)}</strong></div></div>
+      ${product.sizes ? `<div class="sizes-panel"><div class="size-group"><p>Розміри</p><div class="size-list">${product.sizes.map((size) => `<span>${size}</span>`).join("")}</div></div><small>${product.sizesNote}</small></div>` : ""}
+      <div class="price-row"><span>Ціна</span><div class="price-options">${priceOptions(product)}</div></div></div>
     <figure class="product-visual"><img src="${product.image}" alt="${product.imageAlt}" style="object-position:${product.imagePosition || "center"}"><span>${product.number}</span></figure>
   </article>`;
 }
