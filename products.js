@@ -16,7 +16,7 @@ window.PRODUCTS = [
   { id: "bag", number: "04", name: "Сумка для амуніції", label: "Один розмір", price: 1700,
     image: "assets/bars-bag.jpg", imageAlt: "Клубна спортивна сумка BARS — елементи дизайну",
     description: "Містка спортивна сумка для форми та захисної амуніції." },
-  { id: "guards", number: "05", name: "Накладки на ноги", label: "Захист", price: 300,
+  { id: "guards", number: "05", name: "Накладки на ноги", label: "Захист", price: 600,
     image: "assets/bars-leg-guards.jpg", imageAlt: "Сині та червоні накладки на ноги BARS",
     description: "Клубні накладки для тренувань. Доступні у синьому та червоному кольорах.",
     sizes: ["S", "M", "L"], sizesNote: "Тестова сітка" }
