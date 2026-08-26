@@ -3,6 +3,18 @@
 window.SIZE_CHARTS = {
   tshirt: {
     title: "Клубна футболка",
+    diagrams: [
+      {
+        src: "assets/tshirt-measurements-front.png",
+        alt: "Схема вимірювання футболки спереду: ширина грудей A, ширина низу B та довжина рукава C",
+        caption: "A — груди · B — низ · C — рукав"
+      },
+      {
+        src: "assets/tshirt-measurements-back.png",
+        alt: "Схема вимірювання футболки зі спини: довжина спинки D",
+        caption: "D — довжина спинки"
+      }
+    ],
     groups: {
       boy: {
         label: "Хлопчик / чоловіча",

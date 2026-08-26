@@ -6,6 +6,7 @@ const charts = window.SIZE_CHARTS || {};
 
 function renderChart(chart, key) {
   const group = chart.groups[key];
+  const diagrams = chart.diagrams || (chart.diagram ? [{ src: chart.diagram, alt: chart.diagramAlt, caption: "Схема замірів A, B і C" }] : []);
   chartTabs.querySelectorAll("button").forEach((button) => {
     const active = button.dataset.group === key;
     button.classList.toggle("active", active);
@@ -13,7 +14,7 @@ function renderChart(chart, key) {
   });
 
   chartContent.innerHTML = `
-    ${chart.diagram ? `<figure class="measurement-diagram"><img src="${chart.diagram}" alt="${chart.diagramAlt || "Схема вимірювання"}"><figcaption>Схема замірів A, B і C</figcaption></figure>` : ""}
+    ${diagrams.length ? `<div class="measurement-diagrams">${diagrams.map((diagram) => `<figure class="measurement-diagram"><img src="${diagram.src}" alt="${diagram.alt || "Схема вимірювання"}"><figcaption>${diagram.caption || "Схема замірів"}</figcaption></figure>`).join("")}</div>` : ""}
     <p class="table-scroll-hint" aria-hidden="true">Гортайте таблицю <span>→</span></p>
     <div class="mobile-table" tabindex="0" aria-label="Таблиця прокручується горизонтально">
       <table>
