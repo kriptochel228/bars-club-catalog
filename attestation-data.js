@@ -1,7 +1,7 @@
 // Атестаційна програма WSF. Дані винесені окремо, щоб їх було легко оновлювати.
 window.ATTESTATION_LEVELS = [
   {
-    id: "white", order: "01", grade: "10–9 кю", belt: "Білий пояс", period: "3 місяці",
+    id: "white", order: "01", grade: "10–9 кю", belt: "Білий пояс",
     image: "assets/attestation/belt-white.png",
     intro: "Білий пояс — початок шляху. На цьому рівні учень опановує базові блоки, удари та стійки. Куміте й ката не вимагаються.",
     blocks: ["Сейкен дзьодан уке", "Ґедан барай"],
@@ -12,7 +12,7 @@ window.ATTESTATION_LEVELS = [
     note: "Техніка 10 кю повторюється на 9 кю, але від учня очікується якісніше й упевненіше виконання."
   },
   {
-    id: "blue", order: "02", grade: "8–7 кю", belt: "Синій пояс", period: "5 місяців",
+    id: "blue", order: "02", grade: "8–7 кю", belt: "Синій пояс",
     image: "assets/attestation/belt-blue.png",
     intro: "До програми входить уся попередня техніка білого пояса та нові елементи синього пояса.",
     blocks: ["Сото уке", "Уде уке"],
@@ -24,7 +24,7 @@ window.ATTESTATION_LEVELS = [
     sparring: "4 раунди по 2 хвилини"
   },
   {
-    id: "yellow", order: "03", grade: "6–5 кю", belt: "Жовтий пояс", period: "8 місяців",
+    id: "yellow", order: "03", grade: "6–5 кю", belt: "Жовтий пояс",
     image: "assets/attestation/belt-yellow.png",
     intro: "Серйозний перехід від початкового рівня до рівня бійця. Основний акцент — спаринг; усі бої проводяться в боксерських рукавичках.",
     blocks: ["Шуто ґедан барай", "Джуджі уке", "Шуто маваші уке"],
@@ -36,7 +36,7 @@ window.ATTESTATION_LEVELS = [
     sparring: "6 раундів по 2 хвилини"
   },
   {
-    id: "orange", order: "04", grade: "4–3 кю", belt: "Помаранчевий пояс", period: "10 місяців",
+    id: "orange", order: "04", grade: "4–3 кю", belt: "Помаранчевий пояс",
     image: "assets/attestation/belt-orange.png",
     intro: "До програми входить уся попередня техніка жовтого пояса та нові елементи помаранчевого пояса.",
     blocks: ["Каке уке", "Шотей уке"],
@@ -48,7 +48,7 @@ window.ATTESTATION_LEVELS = [
     sparring: "8 раундів по 2 хвилини"
   },
   {
-    id: "green", order: "05", grade: "2–1 кю", belt: "Зелений пояс", period: "1 рік після попередньої атестації",
+    id: "green", order: "05", grade: "2–1 кю", belt: "Зелений пояс",
     image: "assets/attestation/belt-green.png",
     intro: "До програми входить уся попередня техніка помаранчевого пояса та нові елементи зеленого пояса.",
     blocks: ["Емпі уке", "Аґе уке"],
@@ -61,7 +61,7 @@ window.ATTESTATION_LEVELS = [
     sparring: "10 раундів по 2 хвилини"
   },
   {
-    id: "brown", order: "06", grade: "Кю", belt: "Коричневий пояс", period: "1,5 року",
+    id: "brown", order: "06", grade: "Кю", belt: "Коричневий пояс",
     image: "assets/attestation/belt-brown.png",
     intro: "До програми входить уся попередня техніка зеленого пояса та нові елементи коричневого пояса.",
     blocks: ["Кокен уке", "Хейшо уке", "Хейто уке"],
@@ -74,7 +74,7 @@ window.ATTESTATION_LEVELS = [
     theory: "Письмова розповідь про історію створення стилю Сіммей-до."
   },
   {
-    id: "black", order: "07", grade: "1 дан · Шодан", belt: "Чорний пояс", period: "2 роки",
+    id: "black", order: "07", grade: "1 дан · Шодан", belt: "Чорний пояс",
     image: "assets/attestation/belt-black.png",
     intro: "До програми входить уся попередня техніка коричневого пояса та нові елементи чорного пояса.",
     blocks: ["Шотей дзьодан уке", "Шуто джуджі уке"],

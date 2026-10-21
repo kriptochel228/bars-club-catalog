@@ -4,15 +4,14 @@
 .attestation-hero>* { min-width:0; }
 .attestation-hero::before { content:""; position:absolute; top:-20%; right:-12%; width:60vw; aspect-ratio:1; border:1px solid rgba(7,152,134,.22); border-radius:50%; box-shadow:0 0 120px rgba(7,152,134,.08); }
 .attestation-hero-copy { position:relative; z-index:2; }
-.attestation-hero h1 { max-width:900px; }
-.attestation-hero h1 em { color:var(--teal); font-style:normal; }
+.attestation-hero h1 { max-width:980px; font-size:clamp(4rem,5.4vw,6.8rem); line-height:.94; letter-spacing:-.055em; }
+.attestation-hero h1 span,.attestation-hero h1 em { display:block; }
+.attestation-hero h1 em { margin-top:.08em; color:var(--teal); font-style:normal; }
 .attestation-hero-copy>p:not(.eyebrow) { max-width:620px; margin-bottom:34px; color:var(--muted); font-size:clamp(1rem,1.8vw,1.2rem); }
-.wsf-visual { position:relative; z-index:1; margin:0; }
-.wsf-visual img { width:min(600px,48vw); aspect-ratio:16/9; object-fit:cover; box-shadow:0 30px 80px rgba(0,0,0,.45); }
-.attestation-intro { display:grid; grid-template-columns:.8fr 1.2fr; gap:8vw; padding:100px max(32px,calc((100vw - 1120px)/2)); background:var(--charcoal); border-block:1px solid var(--line); }
-.attestation-intro .eyebrow { grid-column:1/-1; margin-bottom:0; }
-.attestation-intro h2 { margin:0; font-size:clamp(2.7rem,5vw,5.2rem); }
-.attestation-intro>p:last-child { max-width:640px; margin:8px 0 0; color:var(--muted); }
+.federation-emblems { position:relative; z-index:1; display:grid; min-height:540px; margin:0; place-items:center; }
+.federation-emblem { display:block; aspect-ratio:1; object-fit:cover; border-radius:50%; filter:drop-shadow(0 28px 42px rgba(0,0,0,.45)); }
+.federation-emblem-main { width:min(430px,33vw); }
+.federation-emblem-secondary { position:absolute; left:0; bottom:30px; width:min(205px,15vw); border:5px solid var(--black); }
 .grade-section { display:grid; grid-template-columns:1.08fr .92fr; min-height:100svh; border-bottom:1px solid var(--line); background:var(--charcoal); scroll-margin-top:24px; }
 .grade-copy { display:flex; min-width:0; padding:88px 7vw; flex-direction:column; justify-content:center; }
 .grade-meta { display:flex; margin-bottom:44px; justify-content:space-between; color:var(--muted); font-size:.62rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
@@ -49,10 +48,9 @@
 @media (max-width:850px) {
   .attestation-page { padding-bottom:calc(74px + env(safe-area-inset-bottom)); }
   .attestation-hero { grid-template-columns:1fr; min-height:auto; padding:150px 20px 70px; }
-  .wsf-visual { margin-top:54px; }
-  .wsf-visual img { width:100%; }
-  .attestation-intro { grid-template-columns:1fr; gap:22px; padding:72px 24px; }
-  .attestation-intro .eyebrow { grid-column:auto; }
+  .federation-emblems { min-height:440px; margin-top:38px; }
+  .federation-emblem-main { width:min(360px,82vw); }
+  .federation-emblem-secondary { left:4%; bottom:16px; width:min(165px,38vw); }
   .grade-section { grid-template-columns:1fr; min-height:auto; }
   .grade-copy { padding:70px 24px 58px; }
   .belt-visual,.belt-left .belt-visual { order:-1; min-height:38svh; padding:52px 24px; }
@@ -65,7 +63,7 @@
 }
 @media (max-width:520px) {
   .attestation-page .header-link { max-width:102px; text-align:right; }
-  .attestation-hero h1 { font-size:clamp(3.5rem,17vw,5rem); }
+  .attestation-hero h1 { font-size:clamp(3.25rem,15vw,4.6rem); line-height:.98; }
   .technique-grid { grid-template-columns:1fr; gap:20px; }
   .grade-meta { margin-bottom:32px; }
   .grade-copy h2 { font-size:clamp(2.8rem,13vw,4rem); }

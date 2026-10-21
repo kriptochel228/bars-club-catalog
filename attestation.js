@@ -13,7 +13,7 @@ function techniqueGroup(title, items) {
 function levelSection(level, index) {
   return `<article class="grade-section ${index % 2 ? "belt-left" : "belt-right"}" id="${level.id}">
     <div class="grade-copy">
-      <div class="grade-meta"><span>${level.order} / ${String(levels.length).padStart(2, "0")}</span><span>${level.period}</span></div>
+      <div class="grade-meta"><span>${level.order} / ${String(levels.length).padStart(2, "0")}</span></div>
       <p class="grade-label">${level.grade}</p>
       <h2>${level.belt}</h2>
       <p class="grade-intro">${level.intro}</p>
